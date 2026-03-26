@@ -5,11 +5,14 @@ import Footer from './Components/Footer/Footer'
 import Homepage from './Pages/Homepage/Homepage'
 import ProductDetails from './Pages/ProductDetails/ProductDetails'
 import Cart from './Components/Cart/Cart'
+import { ToastContainer } from 'react-toastify'
 
 
 const App = () => {
   return (
     <div>
+      <ToastContainer/>
+
       <Navbar/>
       <Routes>
         <Route path='/' element={<Homepage />} />

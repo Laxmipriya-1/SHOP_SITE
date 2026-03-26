@@ -1,6 +1,7 @@
 import React from 'react'
 import { BiCart, BiUser } from 'react-icons/bi'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -20,12 +21,16 @@ const Navbar = () => {
         </div>
 
         <div className='nav_icon_wrapper'>
-         <div className='nav_cart'>
-          <BiCart className='nav_icon'/>
-          <p className='cart_qty'>0</p>
-         </div>
-         <BiUser className='nav_icon'/>
+        <Link to='/cart'>
+           <div className='nav_cart'>
+             <BiCart className='nav_icon'/>
+             <p className='cart_qty'>0</p>
+           </div>
+        </Link>
+              <BiUser className='nav_icon'/>
+
         </div>
+         
 
       </div>
     </div>

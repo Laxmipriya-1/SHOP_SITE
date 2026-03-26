@@ -1,15 +1,15 @@
-import cloth1 from './assets/cloth2.jpg'
-import cloth2 from './assets/cloth3.jpg'
-import cloth3 from './assets/cloth4.jpg'
-import cloth4 from './assets/cloth5.jpg'
-import cloth5 from './assets/cloth6.jpg'
-import cloth6 from './assets/cloth7.jpg'
-import cloth7 from './assets/cloth8.jpg'
-import cloth8 from './assets/cloth9.jpg'
-import cloth9 from './assets/cloth10.jpg'
-import cloth10 from './assets/cloth11.jpg'
-import cloth11 from './assets/cloth12.jpg'
-import cloth12 from './assets/cloth13.jpg'
+import cloth1 from "./cloth2.jpg"
+import cloth2 from './cloth3.jpg'
+import cloth3 from './cloth4.jpg'
+import cloth4 from './cloth5.jpg'
+import cloth5 from './cloth6.jpg'
+import cloth6 from './cloth7.jpg'
+import cloth7 from './cloth8.jpg'
+import cloth8 from './cloth9.jpg'
+import cloth9 from './cloth10.jpg'
+import cloth10 from './cloth11.jpg'
+import cloth11 from './cloth12.jpg'
+import cloth12 from './cloth13.jpg'
 
 
 
@@ -111,4 +111,5 @@ export const productsData = [
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
 
-]
+];
+
