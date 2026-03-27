@@ -68,8 +68,37 @@ const ShopContextProvider = ({children}) =>{
     toast.success("Product removed successfully");
   }
 
+  const increaseQuantity = (id) =>{
+    const cartItem = cart.find((item)=> item.id === id );
+     addToCart(cartItem, id);
+  }
+
+  const decreaseQuantity = (id) => {
+    const cartItem = cart.find((item)=> {
+      return item.id === id;
+    })
+
+    if(cartItem){
+      const newCart = cart.map((item)=>{
+        if(item.id === id){
+          return {...item, amount: cartItem.amount - 1 }
+        } else {
+          return item
+        }
+      })
+      setCart(newCart)
+    } 
+    else{
+       if (cartItem.amount < 2){
+        removeFromCart(id)
+       }
+    }
+  }
+
   return(
-   <ShopContext.Provider value={{products}}>
+   <ShopContext.Provider value={{products, cart, addToCart, removeFromCart,
+   clearCart, increaseQuantity, decreaseQuantity,quantity, total
+   }}>
     {children}
    </ShopContext.Provider>
   )
