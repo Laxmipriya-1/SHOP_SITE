@@ -1,40 +1,150 @@
-.hero{
-    display: flex;
-    padding-inline: 100px;
+/* Main Hero */
+.hero {
+  display: flex;
+  padding-inline: 100px;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+}
+
+/* LEFT */
+.hero_left {
+  max-width: 50%;
+}
+
+.hero_left h1 {
+  font-size: 65px;
+  line-height: 1.2;
+}
+
+.hero_left p {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #666;
+}
+
+/* 🔴 Button */
+.hero_left button {
+  padding: 1.2rem 3.5rem;
+  border: none;
+  background-color: #e63946;
+  color: white;
+  margin-top: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.hero_left button:hover {
+  background-color: #d62828;
+  transform: translateY(-3px);
+}
+
+/* RIGHT */
+.hero_right {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero_right img {
+  width: 640px;
+  height: 570px;
+  object-fit: contain;
+}
+
+button a{
+  color: white;
+  font-weight: bold;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ========================= */
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .hero {
+    padding-inline: 60px;
+  }
+
+  .hero_left h1 {
+    font-size: 50px;
+  }
+
+  .hero_right img {
+    width: 500px;
+    height: auto;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    padding-inline: 40px;
+    text-align: center;
+  }
+
+  .hero_left,
+  .hero_right {
+    max-width: 100%;
+  }
+
+  .hero_left h1 {
+    font-size: 42px;
+  }
+
+  .hero_left p {
+    font-size: 18px;
+  }
+
+  .hero_right img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin-top: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero {
+    padding-inline: 20px;
     gap: 20px;
-    justify-content: space-between;
+  }
+
+  .hero_left h1 {
+    font-size: 32px;
+  }
+
+  .hero_left p {
+    font-size: 16px;
+  }
+
+  .hero_left button {
+    padding: 0.9rem 2rem;
+    font-size: 14px;
+  }
+
+  .hero_right img {
+    max-width: 320px;
+  }
 }
 
-.hero_left{
-    max-width: 50%;
-    margin-top: 120px;
-}
+/* Small Mobile */
+@media (max-width: 400px) {
+  .hero_left h1 {
+    font-size: 26px;
+  }
 
-.hero_left h1{
-    font-size: 65px;
-}
+  .hero_left p {
+    font-size: 14px;
+  }
 
-.hero_left p{
-    margin-top: 15px;
-    font-size: 20px;
-    color: #666;;
-}
-
-.hero_left button{
-    padding: 1.2rem 3.5rem;
-    border: none;
-    background-color: red;
-    color: white;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-.hero_right{
-    max-width: 50%;
-}
-
-.hero_right img{
-    width: 640px;
-    height: 570px;
-    object-fit: contain;
+  .hero_left button {
+    width: 100%;
+  }
 }

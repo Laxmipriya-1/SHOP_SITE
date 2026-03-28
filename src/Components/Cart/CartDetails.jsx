@@ -10,7 +10,7 @@ const CartDetails = ({item}) => {
   return (
     <div className='cart-item'>
       <div className='product-details'>
-      <img src={item.image} alt='image' />
+      <img src={image} alt='image' />
        <div className='product-info'>
          <h3>{title}</h3>
           <div className='cart_item_remove' onClick={()=> removeFromCart(id)}>

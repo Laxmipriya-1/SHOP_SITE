@@ -1,53 +1,181 @@
-.navbar{
-    padding: 30px;
-    padding-inline: 80px;
-    display: flex;
-    justify-content: space-between;
-}
+/* ========================= */
+/* 🔷 NAVBAR BASE */
+/* ========================= */
 
-.logo{
-    font-weight: 400;
-    font-style: italic;
-    font-size: 35px;
-}
-
-.navbar .link ul{
+.navbar {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo h2 {
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* ========================= */
+/* 🔗 LINKS */
+/* ========================= */
+
+.link ul {
+  display: flex;
+  gap: 30px;
   list-style: none;
 }
 
-.navbar .link ul li {
-    font-size: 18px;
-    font-weight: 600;
+.link ul li {
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.nav_icon_wrapper{
-    display: flex;
+.link ul li:hover {
+  color: #e63946;
 }
 
-.nav_cart{
-    display: flex;
-    position: relative;
-    cursor: pointer;
+/* ========================= */
+/* 🛒 ICONS */
+/* ========================= */
+
+.nav_icon_wrapper {
+  display: flex;
+  align-items: center;
 }
 
-.nav_icon{
-    font-size: 34px;
-    margin-left: 35px;
+.nav_icon {
+  font-size: 30px;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.cart_qty{
+.nav_icon:hover {
+  color: #e63946;
+}
+
+/* Cart */
+.nav_cart {
+  position: relative;
+  display: flex;
+}
+
+/* Cart Badge */
+.cart_qty {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #e63946;
+  color: white;
+  font-size: 11px;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================= */
+/* 🍔 HAMBURGER */
+/* ========================= */
+
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* 📱 TABLET */
+/* ========================= */
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .link ul {
+    gap: 20px;
+  }
+
+  .nav_icon {
+    font-size: 26px;
+  }
+}
+
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 20px;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide menu by default */
+  .link {
     position: absolute;
-    background-color: red;
-    color: white;
-    right: -8px;
-    font-size: 12px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    flex-direction: column;
     align-items: center;
-    top: -10px;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Show when active */
+  .link.active {
+    display: flex;
+  }
+
+  .link ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .link ul li {
+    font-size: 18px;
+  }
+
+  /* Adjust icons */
+  .nav_icon_wrapper {
+    margin-top: 10px;
+  }
+}
+
+/* ========================= */
+/* 📱 SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .logo h2 {
+    font-size: 22px;
+  }
+
+  .nav_icon {
+    font-size: 24px;
+    margin-left: 15px;
+  }
+
+  .cart_qty {
+    height: 16px;
+    width: 16px;
+    font-size: 10px;
+  }
 }

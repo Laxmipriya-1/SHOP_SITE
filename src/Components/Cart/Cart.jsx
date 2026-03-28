@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../ShopContext/ShopContext'
 import { FiTrash2 } from 'react-icons/fi';
 import CartDetails from './CartDetails';
+import './Cart.css';
 
 const Cart = () => {
     const {cart, total, quantity , clearCart} = useContext(ShopContext) ;
@@ -12,7 +13,7 @@ const Cart = () => {
             <div className='cart_header'>
                 <h1>Shopping Cart</h1>
                 <h1>Items : ({quantity})</h1>
-                <FiTrash2 onClick={clearCart}/>
+                <FiTrash2 onClick={clearCart} className='delete_cart'/>
             </div>
             <div className='cart_header'>
                 <span>Product Description</span>
@@ -22,8 +23,8 @@ const Cart = () => {
             </div>
             <div className='cart_detail'>
                 {cart.length > 0 ? (
-                   cart.map((item) =>{
-                    <CartDetails item={item} key={item.id}/>
+                    cart.map((item) =>{
+                    return <CartDetails item={item} key={item.id}/>;
                    })
                 ) : (
                   <p>YOUR CART IS EMPTY</p>
@@ -49,11 +50,11 @@ const Cart = () => {
               <span>Promo Code</span>
               <span>No Code</span>
              </div>
-             <div className='summary_item'>
+             <div className='summary_item total_cost'>
               <span>Total Cost</span>
               <span>${isNaN(total) ? 0 : total}</span>
              </div>
-             <button>CHECKOUT</button>
+             <button className='checkout'>CHECKOUT</button>
            </div>
          </div>
        </div>

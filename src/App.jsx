@@ -6,6 +6,7 @@ import Homepage from './Pages/Homepage/Homepage'
 import ProductDetails from './Pages/ProductDetails/ProductDetails'
 import Cart from './Components/Cart/Cart'
 import { ToastContainer } from 'react-toastify'
+import ProductList from './Components/ProductList/ProductList'
 
 
 const App = () => {

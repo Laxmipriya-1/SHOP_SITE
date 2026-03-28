@@ -60,18 +60,36 @@ const ShopContextProvider = ({children}) =>{
     toast.success("cart is empty now");
   }
 
-  const removeFromCart =()=>{
-    const newCart = cart.filter((item)=>{
-      return item.id !== id;
-    })
-    setCart(newCart);
-    toast.success("Product removed successfully");
-  }
+  // const removeFromCart =()=>{
+  //   const newCart = cart.filter((item)=>{
+  //     return item.id !== id;
+  //   })
+  //   setCart(newCart);
+  //   toast.success("Product removed successfully");
+  // }
 
-  const increaseQuantity = (id) =>{
-    const cartItem = cart.find((item)=> item.id === id );
-     addToCart(cartItem, id);
-  }
+  const removeFromCart = (id) => {
+  const newCart = cart.filter((item) => item.id !== id);
+  setCart(newCart);
+  toast.success("Product removed successfully");
+};
+
+  // const increaseQuantity = (id) =>{
+  //   const cartItem = cart.find((item)=> item.id === id );
+  //    addToCart(cartItem, id);
+  // }
+
+  const increaseQuantity = (id) => {
+  const newCart = cart.map((item) => {
+    if (item.id === id) {
+      return { ...item, amount: item.amount + 1 };
+    } else {
+      return item;
+    }
+  });
+
+  setCart(newCart);
+};
 
   const decreaseQuantity = (id) => {
     const cartItem = cart.find((item)=> {
