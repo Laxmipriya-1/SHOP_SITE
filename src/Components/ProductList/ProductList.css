@@ -62,7 +62,9 @@
     border-radius: 5px;
 }
 
-
+#category{
+  font-weight: bold;
+}
 
 
 /* Center product image inside the card */

@@ -43,7 +43,7 @@ export const productsData = [
         image : cloth4,
         title : 'Mens Casual Sleeve Shirts ',
         price: 45,
-        category: 'ladies',
+        category: 'mens',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -51,7 +51,7 @@ export const productsData = [
         image : cloth5,
         title : ' Mens Casual Sleeve Shirts ',
         price: 45,
-        category: 'ladies',
+        category: 'mens',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -59,7 +59,7 @@ export const productsData = [
         image : cloth6,
         title : 'Mens Casual Sleeve Shirts ',
         price: 45,
-        category: 'ladies',
+        category: 'mens',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -75,7 +75,7 @@ export const productsData = [
         image : cloth8,
         title : '  Toddler Kids 2 Piece Outfits',
         price: 45,
-        category: 'ladies',
+        category: 'kids',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -83,7 +83,7 @@ export const productsData = [
         image : cloth9,
         title : ' Toddler Kids 2 Piece Outfits',
         price: 45,
-        category: 'ladies',
+        category: 'kids',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -91,7 +91,7 @@ export const productsData = [
         image : cloth10,
         title : ' Toddler Kids 2 Piece Outfits',
         price: 45,
-        category: 'ladies',
+        category: 'kids',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -99,7 +99,7 @@ export const productsData = [
         image : cloth11,
         title : ' Toddler Kids 2 Piece Outfits',
         price: 45,
-        category: 'ladies',
+        category: 'kids',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -107,7 +107,7 @@ export const productsData = [
         image : cloth12,
         title : '  Mens Casual Sleeve Shirts ',
         price: 45,
-        category: 'ladies',
+        category: 'mens',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
 
