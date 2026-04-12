@@ -1,115 +1,4 @@
-// import React, { useContext } from 'react'
-// import { ShopContext } from '../ShopContext/ShopContext'
-// import './ProductList.css'
-// import { Link } from 'react-router-dom';
 
-// const ProductList = () => {
-//   const {products , addToCart} = useContext(ShopContext);
-
-//   return (
-//     <div>
-//       <div className="product-list" id="products">
-//        <h2>Our Elegant Collections</h2>
-
-//         <div className='product-grid'>
-//           {
-//             products.map((product)=>{
-//               const {id, image, title, price, category} = product
-//               return(
-//                 <div className='product-card' key={id}>
-//                 <Link to={`/product/${product.id} `}>
-//                 <img src={image} alt='' className='product-image'/>
-//                  <div className='product-info'>
-//                   <h4>{title}</h4>
-//                   <h4>{category}</h4>
-//                   <p>${price}</p>
-//                  </div>
-//                  </Link>
-//                  <button className='add-to-cart' onClick={()=> addToCart(product, id)}>Add To Cart</button>
-
-//                 </div>
-//               )
-//             })
-//           }
-//         </div>
-
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default ProductList
-
-
-// import React, { useContext, useState } from 'react'
-// import { ShopContext } from '../ShopContext/ShopContext'
-// import './ProductList.css'
-// import { Link } from 'react-router-dom';
-// import CategoryFilter from '../CategoryFilter/CategoryFilter';
-
-// const ProductList = () => {
-//   const { products, addToCart } = useContext(ShopContext);
-
-//   // ✅ State for selected category
-//   const [selectedCategory, setSelectedCategory] = useState("all");
-
-//   // ✅ Get unique categories dynamically
-//   const categories = ["all", ...new Set(products.map(p => p.category))];
-
-//   // ✅ Filter products based on selected category
-//   const filteredProducts =
-//     selectedCategory === "all"
-//       ? products
-//       : products.filter((product) => product.category === selectedCategory);
-
-//   return (
-//     <div>
-//       <div className="product-list" id="products">
-//         <h2>Our Elegant Collections</h2>
-
-//         {/* ✅ Category Filter Component */}
-//         <CategoryFilter
-//           categories={categories}
-//           selectedCategory={selectedCategory}
-//           setSelectedCategory={setSelectedCategory}
-//         />
-
-//         <div className='product-grid'>
-//           {
-//             filteredProducts.map((product) => {
-//               const { id, image, title, price, category } = product;
-//               return (
-//                 <div className='product-card' key={id}>
-                  
-//                   {/* ✅ Fixed Link (removed extra space) */}
-//                   <Link to={`/product/${id}`}>
-//                     <img src={image} alt='' className='product-image' />
-//                     <div className='product-info'>
-//                       <h4>{title}</h4>
-//                       <h4 id='category'>{category}</h4>
-//                       <p>${price}</p>
-//                     </div>
-//                   </Link>
-
-//                   <button
-//                     className='add-to-cart'
-//                     onClick={() => addToCart(product, id)}
-//                   >
-//                     Add To Cart
-//                   </button>
-
-//                 </div>
-//               )
-//             })
-//           }
-//         </div>
-
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default ProductList;
 
 import React, { useContext, useState } from 'react'
 import { ShopContext } from '../ShopContext/ShopContext'
@@ -119,6 +8,9 @@ import { Link } from 'react-router-dom';
 import CategoryFilter from '../CategoryFilter/CategoryFilter';
 import PriceSort from '../CategoryFilter/PriceSort';
 
+import PriceRange from '../CategoryFilter/PriceRange';
+import RatingFilter from '../CategoryFilter/RatingFilter';
+
 const ProductList = () => {
   const { products, addToCart } = useContext(ShopContext);
 
@@ -126,14 +18,55 @@ const ProductList = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortOption, setSortOption] = useState("default");
 
+  const [priceRange, setPriceRange] = useState([0, 100]);
+  const [minRating, setMinRating] = useState(0);
+  
+
   // Get categories dynamically
   const categories = ["all", ...new Set(products.map(p => p.category))];
 
   // Filter by category
-  const filteredProducts =
-    selectedCategory === "all"
-      ? products
-      : products.filter((product) => product.category === selectedCategory);
+  // const filteredProducts =
+  //   selectedCategory === "all"
+  //     ? products
+  //     : products.filter((product) => product.category === selectedCategory);
+
+  // const filteredProducts = products
+  // .filter((product) =>
+  //   selectedCategory === "all"
+  //     ? true
+  //     : product.category === selectedCategory
+  // )
+  // .filter((product) =>
+  //   product.price >= priceRange[0] &&
+  //   product.price <= priceRange[1]
+  // )
+  // .filter((product) =>
+  //   product.rating >= minRating
+  // );
+
+
+
+  const filteredProducts = products.filter((product) => {
+  // Category filter
+  const categoryMatch =
+    selectedCategory === "all" ||
+    product.category === selectedCategory;
+
+  // Price filter
+  const priceMatch =
+    product.price >= priceRange[0] &&
+    product.price <= priceRange[1];
+
+  // Rating filter
+  const ratingMatch =
+    product.rating >= minRating;
+
+  // Return only if all conditions match
+  return categoryMatch && priceMatch && ratingMatch;
+});
+
+
 
   //  Sort by price
   const sortedProducts = [...filteredProducts];
@@ -149,19 +82,30 @@ const ProductList = () => {
       <div className="product-list" id="products">
         <h2>Our Elegant Collections 😍</h2>
 
-        {/* ✅ Category Filter */}
-        <CategoryFilter
-          categories={categories}
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-        />
+       <div className="filters-container">
 
-        {/* ✅ Price Sort */}
-        <PriceSort
-          sortOption={sortOption}
-          setSortOption={setSortOption}
-        />
+     <CategoryFilter
+      categories={categories}
+      selectedCategory={selectedCategory}
+      setSelectedCategory={setSelectedCategory}
+      />
+ 
+      <PriceSort
+       sortOption={sortOption}
+       setSortOption={setSortOption}
+      />
 
+      <PriceRange
+        priceRange={priceRange}
+        setPriceRange={setPriceRange}
+      />
+
+       <RatingFilter
+         minRating={minRating}
+         setMinRating={setMinRating}
+       />
+
+    </div>
         <div className='product-grid'>
           {
             sortedProducts.map((product) => {
@@ -177,6 +121,10 @@ const ProductList = () => {
                       <h4>{title}</h4>
                       <h4>{category}</h4>
                       <p>${price}</p>
+                      <div className="rating">
+                        {"⭐".repeat(Math.floor(product.rating))}
+                          <span className="rating-number"> ({product.rating})</span>
+                      </div>
                     </div>
                   </Link>
 

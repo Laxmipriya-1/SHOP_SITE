@@ -1,4 +1,3 @@
-
 # Online Store Homepage with Product Categories🎉
 
 ## Project Overview
@@ -8,10 +7,13 @@ A dynamic and responsive online store homepage built with React.js, featuring ca
 * Product categories for men, women, and kids
 * Interactive product cards with image, name, price, and "Add to Cart"
 * Filters by category and sorting by price/rating
+* Price Range filter using slider or predefined price ranges
+* Ratings filter (e.g., 4 stars and above)
 * Responsive design for mobile, tablet, and desktop
 * Deployed on Vercel
 
 ## Technologies Used
+
 * React.js
 * Tailwind CSS
 * Git/GitHub
@@ -28,4 +30,3 @@ https://shop-site-eta.vercel.app/
 
 ## GitHub Repo
 https://github.com/Laxmipriya-1/SHOP_SITE
-```

@@ -162,3 +162,45 @@
     font-size: 1.1rem;
   }
 }
+
+
+
+/* 11-04-2026 */
+
+.filters-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small devices */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.rating {
+  color: #f5a623;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.rating-number {
+  color: #555;
+  font-size: 12px;
+}

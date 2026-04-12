@@ -20,6 +20,7 @@ export const productsData = [
         title : ' Womens Basic Casual Tops',
         price: 23,
         category: 'ladies',
+        rating: 1.2,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -28,6 +29,7 @@ export const productsData = [
         title : '  Womens Basic Casual Tops',
         price: 45,
         category: 'ladies',
+        rating: 4.3,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -36,6 +38,7 @@ export const productsData = [
         title : '  Womens Basic Casual Tops',
         price: 51,
         category: 'ladies',
+        rating: 4.0,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -44,6 +47,7 @@ export const productsData = [
         title : 'Mens Casual Sleeve Shirts ',
         price: 46,
         category: 'mens',
+        rating: 3.2,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -52,6 +56,7 @@ export const productsData = [
         title : ' Mens Casual Sleeve Shirts ',
         price: 99,
         category: 'mens',
+        rating: 3.5,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -60,6 +65,7 @@ export const productsData = [
         title : 'Mens Casual Sleeve Shirts ',
         price: 34,
         category: 'mens',
+        rating: 4.1,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -68,6 +74,7 @@ export const productsData = [
         title : '  Womens Basic Casual Tops',
         price: 45,
         category: 'ladies',
+        rating: 3.4,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -76,6 +83,7 @@ export const productsData = [
         title : '  Toddler Kids 2 Piece Outfits',
         price: 78,
         category: 'kids',
+        rating: 4.4,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -84,6 +92,7 @@ export const productsData = [
         title : ' Toddler Kids 2 Piece Outfits',
         price: 25,
         category: 'kids',
+        rating: 4.7,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -92,6 +101,7 @@ export const productsData = [
         title : ' Toddler Kids 2 Piece Outfits',
         price: 89,
         category: 'kids',
+        rating: 4.7,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -100,6 +110,7 @@ export const productsData = [
         title : ' Toddler Kids 2 Piece Outfits',
         price: 40,
         category: 'kids',
+        rating: 4.2,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
     {
@@ -108,6 +119,7 @@ export const productsData = [
         title : '  Mens Casual Sleeve Shirts ',
         price: 55,
         category: 'mens',
+        rating: 2.0,   
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
 
